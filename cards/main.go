@@ -1,5 +1,5 @@
 package main
-
+// import "fmt"
 func main() {
 	//var card string = "Ace of Spades"
 	// card := "Ace of Spades"  // this is same as above, when defining a variable. Go will figure it out for you
@@ -16,9 +16,18 @@ func main() {
 	// iterate through slice
 	// cards.print()
 
+	
 	hand, remainingDeck := deal(cards, 5)
 	hand.print()
 	remainingDeck.print()
+	// cards.saveToFile("my_cards")
+	newCards := newDeckFromFile("my_cards")
+	newCards.print()
 
+	//shuffle 
+	newCards.shuffle()
+	newCards.print()
+
+    
 }
 
